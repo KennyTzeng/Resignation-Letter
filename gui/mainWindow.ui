@@ -56,7 +56,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="acceptButton">
+   <widget class="QPushButton" name="approveButton">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -71,7 +71,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Accept</string>
+     <string>Approve</string>
     </property>
    </widget>
    <widget class="QPushButton" name="denyButton">

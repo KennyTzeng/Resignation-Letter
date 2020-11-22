@@ -11,6 +11,9 @@ class Application(QtWidgets.QMainWindow, ui.Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
 
+        # set window icon
+        self.setWindowIcon(QtGui.QIcon('images/letter.png'))
+
         # load image
         pixmap = QtGui.QPixmap(self.getPoseImageFilepath())
         pixmap = pixmap.scaled(self.poseImage.width(), self.poseImage.height(), QtCore.Qt.IgnoreAspectRatio)
