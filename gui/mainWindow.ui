@@ -19,6 +19,9 @@
    <string>Resignation Confirmation Letter</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: #FFFFFF;</string>
+   </property>
    <widget class="QGraphicsView" name="poseImage">
     <property name="geometry">
      <rect>
@@ -88,26 +91,8 @@
       <pointsize>12</pointsize>
      </font>
     </property>
-    <property name="contextMenuPolicy">
-     <enum>Qt::NoContextMenu</enum>
-    </property>
     <property name="text">
      <string>Deny</string>
-    </property>
-    <property name="checkable">
-     <bool>false</bool>
-    </property>
-    <property name="checked">
-     <bool>false</bool>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="greetingTextLabel">
