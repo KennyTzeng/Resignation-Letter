@@ -34,6 +34,7 @@ class MainWindow(QtWidgets.QMainWindow, ui.Ui_MainWindow):
         denyBtn.setFont(placeholderBtn.font())
         denyBtn.setObjectName(placeholderBtn.objectName())
         denyBtn.setText(placeholderBtn.text())
+        denyBtn.setStyleSheet(placeholderBtn.styleSheet())
         self.denyButton = denyBtn
         placeholderBtn.deleteLater()
 
