@@ -5,6 +5,7 @@ import src.global_def as g
 class DenyButton(QtWidgets.QPushButton):
     def __init__(self, parent=None):
         super().__init__(parent)
+        self.setEnabled(False)
 
     def enterEvent(self, event):
         self.moveRandomly()
