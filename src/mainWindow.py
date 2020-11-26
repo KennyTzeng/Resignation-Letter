@@ -6,7 +6,7 @@ from PyQt5 import QtGui
 
 import gui.mainWindow as ui
 from src.denyButton import DenyButton
-import src.global_def as g
+import lib.global_def as g
 
 class MainWindow(QtWidgets.QMainWindow, ui.Ui_MainWindow):
     def __init__(self):
@@ -42,5 +42,5 @@ class MainWindow(QtWidgets.QMainWindow, ui.Ui_MainWindow):
         path = "images/"
         images = ["pose1.jpg", "pose2.jpg"]
 
-        return "%s%s"%(path, images[random.randint(0, len(images) - 1)])
+        return "%s%s" % (path, images[random.randint(0, len(images) - 1)])
 
