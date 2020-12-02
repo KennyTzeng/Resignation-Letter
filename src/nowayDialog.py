@@ -5,8 +5,8 @@ from PyQt5 import QtGui
 import gui.nowayDialog as ui
 
 class NowayDialog(QtWidgets.QDialog, ui.Ui_nowayDialog):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, parent=None):
+        super().__init__(parent)
         self.setupUi(self)
 
         # set dialog icon
