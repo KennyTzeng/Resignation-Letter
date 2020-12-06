@@ -7,6 +7,7 @@ from PyQt5 import QtGui
 import gui.mainWindow as ui
 from src.denyButton import DenyButton
 from src.nowayDialog import NowayDialog
+from src.approveDialog import ApproveDialog
 import lib.global_def as g
 
 class MainWindow(QtWidgets.QMainWindow, ui.Ui_MainWindow):
@@ -49,7 +50,8 @@ class MainWindow(QtWidgets.QMainWindow, ui.Ui_MainWindow):
         nowayDialog.exec_()
 
     def approveButtonHandler(self):
-        sys.exit(0)
+        approveDialog = ApproveDialog(self)
+        approveDialog.exec_()
 
     def getPoseImageFilepath(self):
         path = "images/"
