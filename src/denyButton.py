@@ -24,8 +24,14 @@ class DenyButton(QtWidgets.QPushButton):
             self.setFont(font)
             threading.Timer(1, self.cb_narrow, [current_width, current_height, current_font_size]).start()
 
-#        elif random.random() < 0.20 and not self.lock:
-#           self.lock = True
+        elif random.random() < 0.30 and not self.lock:
+            self.lock = True
+            DEBUG_PRINT("%s locked" % self.objectName())
+            current_width, current_height = self.width(), self.height()
+            current_text = self.text()
+            self.setText("")
+            self.setGeometry(self.x(), self.y(), 1, 1)
+            threading.Timer(1, self.cb_disappear, [current_width, current_height, current_text]).start()
 
     def moveRandomly(self):
         new_x = random.randint(g.PADDING, g.WINDOW_WIDTH - g.PADDING - self.width())
@@ -40,5 +46,9 @@ class DenyButton(QtWidgets.QPushButton):
         self.lock = False
         DEBUG_PRINT("%s unlocked" % self.objectName())
     
-#    def cb_disappear(self):
+    def cb_disappear(self, origin_width, origin_height, origin_text):
+        self.setText(origin_text)
+        self.setGeometry(self.x(), self.y(), origin_width, origin_height)
+        self.lock = False
+        DEBUG_PRINT("%s unlocked" % self.objectName())
 
