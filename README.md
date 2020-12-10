@@ -21,7 +21,8 @@ Clone this project and run it in virtual environment.
 ```
 
 ## Others
-[https://hackmd.io/@KennyTseng/HJqBqHIcP](https://hackmd.io/@KennyTseng/HJqBqHIcP)
+Link: [https://hackmd.io/@KennyTseng/HJqBqHIcP](https://hackmd.io/@KennyTseng/HJqBqHIcP)
+
 Here are some notes I wrote when doing this project, including:
 + Trouble shooting of running PyQt5 in Windows subsystem ubuntu 18.04 (WSL)
 + GUI design - Qt Designer
